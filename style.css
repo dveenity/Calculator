@@ -90,7 +90,7 @@ body {
   display: flex;
   flex-flow: column;
   align-items: center;
-  margin: 2rem 0;
+  padding-top: 2rem;
 }
 
 .container {
@@ -115,27 +115,28 @@ body {
   background-color: var(--background-color);
   color: var(--display-color);
   text-align: end;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
 }
 
 .display-area .display-one {
-  height: 70%;
+  height: 14vh;
   font-size: 1rem;
-  padding-top: 4.5rem;
+  padding-top: 8vh;
 }
 
 .display-area .display-two {
-  height: 30%;
-  font-size: 2rem;
+  height: 6vh;
+  font-size: clamp(1rem, 2rem, 2rem);
 }
 
 /*STYLING BUTTONS*/
 .buttons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 5rem 5rem 5rem 5rem 5rem;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   gap: 1rem;
   width: 100%;
+  height: clamp(60vh, 65vh, 70vh);
   background-color: var(--buttons-background-color);
   border-radius: 1rem;
   padding: 1rem 0.5rem;
@@ -148,6 +149,7 @@ body {
   font-size: 1.2rem;
   font-weight: bold;
   border-radius: 0.5rem;
+  padding: 0.5rem;
 }
 
 .buttons button:nth-child(1) {
@@ -170,4 +172,12 @@ body {
 .buttons button:nth-child(16),
 .buttons button:nth-child(20) {
   background-color: var(--some-button-background-color);
+}
+
+@media only screen and (min-width: 700px) {
+  body {
+    height: 100vh;
+    margin: unset;
+    padding: 1rem 0;
+  }
 }
