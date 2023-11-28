@@ -8,6 +8,11 @@
   font-family: "Inter", sans-serif;
 }
 
+html {
+  overscroll-behavior: none;
+  overflow: hidden;
+}
+
 /*DARK/LIGHT MODE VARIABLE*/
 :root {
   --background-color: white;
@@ -92,6 +97,7 @@ body {
   align-items: center;
   margin-top: 1rem;
   overflow-y: hidden;
+  overscroll-behavior: none;
 }
 
 .container {
