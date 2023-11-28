@@ -6,6 +6,7 @@
   box-sizing: border-box;
   transition: 0.2s ease-in-out;
   font-family: "Inter", sans-serif;
+  border: 1px solid white;
 }
 
 /*DARK/LIGHT MODE VARIABLE*/
@@ -90,7 +91,8 @@ body {
   display: flex;
   flex-flow: column;
   align-items: center;
-  padding-top: 2rem;
+  padding-top: 1rem;
+  max-height: 90vh;
 }
 
 .container {
