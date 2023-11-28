@@ -91,7 +91,7 @@ body {
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 4rem);
+  height: 80vh;
   margin-top: 1rem;
 }
 
