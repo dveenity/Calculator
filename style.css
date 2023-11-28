@@ -90,6 +90,7 @@ body {
   display: flex;
   flex-flow: column;
   align-items: center;
+  margin: 2rem 0;
 }
 
 .container {
@@ -98,7 +99,6 @@ body {
   width: 100%;
   max-width: 450px;
   border-radius: 0.5rem;
-  height: calc(100vh - 38px);
 }
 
 /*STYLING CALCULATOR DISPLAY*/
@@ -133,11 +133,11 @@ body {
 .buttons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 5rem 5rem 5rem 5rem 5rem;
   gap: 1rem;
   width: 100%;
   background-color: var(--buttons-background-color);
   border-radius: 1rem;
-  height: calc(80vh - 38px);
   padding: 1rem 0.5rem;
 }
 
