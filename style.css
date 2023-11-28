@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.2s ease-in-out;
+  font-family: "Inter", sans-serif;
+}
+
+/*DARK/LIGHT MODE VARIABLE*/
+:root {
+  --background-color: white;
+  --display-color: black;
+  --buttons-background-color: rgb(250, 250, 250);
+  --some-button-background-color: white;
+}
+
+[data-theme="dark"] {
+  --background-color: black;
+  --display-color: white;
+  --buttons-background-color: rgb(15, 15, 15);
+  --some-button-background-color: rgb(25, 25, 25);
+}
+
+/*TOGGLE SWITCH STYLE*/
+/*Simple css to style it like a toggle switch*/
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+
+  em {
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/*STYLING THE LOOK AND FEEL*/
+body {
+  background-color: var(--background-color);
+  color: var(--display-color);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 0.5rem;
+  height: calc(100vh - 38px);
+}
+
+/*STYLING CALCULATOR DISPLAY*/
+.display-area {
+  color: var(--display-color);
+  display: flex;
+  flex-flow: column;
+  height: 20vh;
+}
+
+.display-area input {
+  border: none;
+  outline: none;
+  background-color: var(--background-color);
+  color: var(--display-color);
+  text-align: end;
+  padding: 0.5rem 1rem;
+}
+
+.display-area .display-one {
+  height: 70%;
+  font-size: 1rem;
+  padding-top: 4.5rem;
+}
+
+.display-area .display-two {
+  height: 30%;
+  font-size: 2rem;
+}
+
+/*STYLING BUTTONS*/
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+  background-color: var(--buttons-background-color);
+  border-radius: 1rem;
+  height: calc(80vh - 38px);
+  padding: 1rem 0.5rem;
+}
+
+.buttons button {
+  border: none;
+  background-color: transparent;
+  color: var(--display-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+}
+
+.buttons button:nth-child(1) {
+  color: red;
+}
+
+.buttons button:nth-child(2),
+.buttons button:nth-child(3),
+.buttons button:nth-child(4),
+.buttons button:nth-child(8),
+.buttons button:nth-child(12),
+.buttons button:nth-child(16),
+.buttons button:nth-child(20) {
+  color: blue;
+}
+
+.buttons button:nth-child(4),
+.buttons button:nth-child(8),
+.buttons button:nth-child(12),
+.buttons button:nth-child(16),
+.buttons button:nth-child(20) {
+  background-color: var(--some-button-background-color);
+}
