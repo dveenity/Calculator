@@ -90,7 +90,6 @@ body {
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content: center;
   height: 80vh;
   margin-top: 1rem;
 }
@@ -138,7 +137,7 @@ body {
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   gap: 1rem;
   width: 100%;
-  height: clamp(60vh, 65vh, 70vh);
+  height: clamp(60vh, 65vh, 65vh);
   background-color: var(--buttons-background-color);
   border-radius: 1rem;
   padding: 1rem 0.5rem;
